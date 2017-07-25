@@ -1,0 +1,31 @@
+#!/bin/bash
+
+
+
+#被測程式
+hello(){
+
+echo "Hello World!"
+
+}
+
+#測試用程式(成功範例)
+test_hello(){
+
+	assertEquals "測試是否回傳HelloWorld" "$(hello)" "Hello World!"
+
+}
+
+#測試用程式(錯誤範例)
+test_add(){
+	
+	actual=$((1+3))
+	expected=2
+	assertEquals "測試加法" "$expected" "$actual"
+
+}
+
+#測試程式的路徑
+path="/Users/yaoyuhong/Desktop/UnitTest/shunit2/src/shunit2"
+#echo $path
+source $path
