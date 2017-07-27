@@ -12,7 +12,7 @@ echo "Hello World!"
 #測試用程式(成功範例)
 test_hello(){
 
-	assertEquals "測試是否回傳HelloWorld" "$(hello)" "Hello World!"
+	assertEquals "測試是否回傳HelloWorld" "Hello World!" "$(hello)"
 
 }
 
